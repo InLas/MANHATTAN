@@ -25,6 +25,7 @@ window.onload = function () {
       });
 
       targetElement.classList.add('_active');
+      targetElement.blur();
 
       announcementsLists.forEach(announcementsList => {
         announcementsList.classList.remove('_active');

@@ -6,7 +6,7 @@
     padding: 136px 0 0;
   }
 
-  &__wrapper {
+  &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -98,7 +98,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 416px;
-    margin: 0 0 10px 0;
+    margin: 0 0 6px;
     border-radius: 50%;
   }
 
@@ -108,7 +108,7 @@
     letter-spacing: 1px;
     position: relative;
     flex: 1 0 50%;
-    padding: 8px 10px 5px;
+    padding: 12px 10px 5px;
     box-sizing: border-box;
     max-width: 208px;
     color: $whiteColor;
@@ -117,6 +117,16 @@
     border-radius: 5px 5px 0 0;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+      }
+    }
+
+    &:focus {
+      color: $accentColor;
+    }
 
     &._active {
       background-color: rgba($color: $accentColor, $alpha: 0.1);
@@ -135,7 +145,7 @@
 
   &__content {
     max-width: 416px;
-    padding: 39px 35px 9px;
+    padding: 39px 35px 10px;
     box-sizing: border-box;
     background-color: rgba($color: $accentColor, $alpha: 0.1);
     border-radius: 0 0 5px 5px;
@@ -164,6 +174,6 @@
   }
 
   &__item {
-    margin: 0 13px 26px;
+    margin: 0 13px 22px;
   }
 }

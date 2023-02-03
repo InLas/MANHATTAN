@@ -1,0 +1,84 @@
+.entertainment {
+  @include adaptiv-value('margin-bottom', 150, 50, 1);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -15px;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 40px;
+    }
+  }
+
+  &__events {
+    max-width: 366px;
+    text-align: center;
+    margin: 15px;
+
+    @media (min-width: $tablet-width) {
+      flex: 0 1 366px;
+    }
+  }
+
+  &__subTitle {
+    @include adaptiv-value('margin-bottom', 37, 20, 1);
+  }
+
+  &__title {
+    @include adaptiv-value('margin-bottom', 39, 22, 1);
+  }
+
+  &__text {
+    color: $whiteColor;
+    line-height: 20px;
+    margin: 0 0 35px;
+  }
+
+  &__description {
+    text-transform: uppercase;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border: 2px solid $accentColor;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: transparent;
+        color: $accentColor;
+      }
+    }
+
+    &:focus {
+      background-color: transparent;
+      color: $accentColor;
+    }
+  }
+
+  &__photo {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      border-radius: 5px;
+    }
+  }
+
+  &__tourists {
+    max-width: 366px;
+    text-align: center;
+    margin: 15px;
+
+    @media (min-width: $tablet-width) {
+      flex: 0 1 366px;
+    }
+  }
+}

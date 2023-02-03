@@ -1,5 +1,5 @@
 .kitchen {
-  @include adaptiv-value('margin-bottom', 150, 50, 1);
+  @include adaptiv-value('margin-bottom', 150, 80, 1);
 
   &__container {
     display: flex;
@@ -8,20 +8,37 @@
   }
 
   &__subTitle {
-    @include adaptiv-value('margin-bottom', 40, 20, 1);
+    @include adaptiv-value('margin-bottom', 37, 20, 1);
   }
 
   &__title {
-    @include adaptiv-value('margin-bottom', 80, 40, 1);
+    @include adaptiv-value('margin-bottom', 83, 40, 1);
   }
 
   &__menu-link {
     font-family: 'Gothampro';
     font-weight: 700;
     font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.7px;
     text-transform: uppercase;
-    padding: 15px 30px;
+    padding: 11px 26px;
     background-color: $accentColor;
+    border: 2px solid $accentColor;
     border-radius: 5px;
+    transition: all 0.3s ease 0s;
+    outline: none;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: transparent;
+        color: $accentColor;
+      }
+    }
+
+    &:focus {
+      background-color: transparent;
+      color: $accentColor;
+    }
   }
 }

@@ -207,6 +207,7 @@ input[type="radio"].visually-hidden {
 .slider-kitchen__price {
   font-size: 14px;
   line-height: 21px;
+  letter-spacing: 0.7px;
   padding: 10px 20px 7px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -218,6 +219,10 @@ input[type="radio"].visually-hidden {
   display: block;
   margin: 0 0 10px;
   color: #D5621D;
+}
+
+.slider-kitchen__description {
+  line-height: 21px;
 }
 
 .slider-kitchen .slick-list {
@@ -241,10 +246,14 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   background-color: #D5621D;
-  border: none;
+  border: 2px solid #D5621D;
   border-radius: 5px;
   cursor: pointer;
   z-index: 5;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  outline: none;
 }
 
 .slider-kitchen .slick-arrow::before {
@@ -253,6 +262,14 @@ input[type="radio"].visually-hidden {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.slider-kitchen .slick-arrow:focus {
+  background-color: transparent;
+}
+
+.slider-kitchen .slick-arrow:focus::before {
+  color: #D5621D;
 }
 
 .slider-kitchen .slick-prev {
@@ -341,7 +358,9 @@ input[type="radio"].visually-hidden {
 .subTitle {
   font-family: "Gothampro";
   font-weight: 700;
+  line-height: 21px;
   text-transform: uppercase;
+  letter-spacing: 0.7px;
   white-space: nowrap;
   display: inline-block;
   padding: 10px 20px 7px;
@@ -502,7 +521,13 @@ input[type="radio"].visually-hidden {
   transition: all 0.3s ease 0s;
 }
 
+.nav-header__link:focus {
+  color: #D5621D;
+}
+
 .nav-header__link--booking {
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,7 +549,7 @@ input[type="radio"].visually-hidden {
   padding: 106px 0 0;
 }
 
-.intro__wrapper {
+.intro__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,7 +646,7 @@ input[type="radio"].visually-hidden {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 416px;
-  margin: 0 0 10px 0;
+  margin: 0 0 6px;
   border-radius: 50%;
 }
 
@@ -633,7 +658,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;
-  padding: 8px 10px 5px;
+  padding: 12px 10px 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 208px;
@@ -645,6 +670,10 @@ input[type="radio"].visually-hidden {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.announcements__toogle:focus {
+  color: #D5621D;
 }
 
 .announcements__toogle._active {
@@ -663,7 +692,7 @@ input[type="radio"].visually-hidden {
 
 .announcements__content {
   max-width: 416px;
-  padding: 39px 35px 9px;
+  padding: 39px 35px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: rgba(213, 98, 29, 0.1);
@@ -709,7 +738,7 @@ input[type="radio"].visually-hidden {
 }
 
 .announcements__item {
-  margin: 0 13px 26px;
+  margin: 0 13px 22px;
 }
 
 .kitchen {
@@ -730,21 +759,98 @@ input[type="radio"].visually-hidden {
 }
 
 .kitchen__subTitle {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .kitchen__title {
-  margin-bottom: 80px;
+  margin-bottom: 83px;
 }
 
 .kitchen__menu-link {
   font-family: 'Gothampro';
   font-weight: 700;
   font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding: 11px 26px;
+  background-color: #D5621D;
+  border: 2px solid #D5621D;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+
+.kitchen__menu-link:focus {
+  background-color: transparent;
+  color: #D5621D;
+}
+
+.entertainment {
+  margin-bottom: 150px;
+}
+
+.entertainment__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -15px;
+}
+
+.entertainment__events {
+  max-width: 366px;
+  text-align: center;
+  margin: 15px;
+}
+
+.entertainment__subTitle {
+  margin-bottom: 37px;
+}
+
+.entertainment__title {
+  margin-bottom: 39px;
+}
+
+.entertainment__text {
+  color: #ffffff;
+  line-height: 20px;
+  margin: 0 0 35px;
+}
+
+.entertainment__description {
   text-transform: uppercase;
   padding: 15px 30px;
-  background-color: #D5621D;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #D5621D;
   border-radius: 5px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.entertainment__description:focus {
+  background-color: transparent;
+  color: #D5621D;
+}
+
+.entertainment__photo {
+  display: none;
+}
+
+.entertainment__tourists {
+  max-width: 366px;
+  text-align: center;
+  margin: 15px;
 }
 
 @media (min-width: 768px) {
@@ -752,11 +858,36 @@ input[type="radio"].visually-hidden {
     min-height: 540px;
     padding: 0 0 0 30px;
   }
+
+  .entertainment__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .entertainment__events {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 366px;
+            flex: 0 1 366px;
+  }
+
+  .entertainment__tourists {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 366px;
+            flex: 0 1 366px;
+  }
 }
 
 @media (min-width: 1024px) {
   .slider-kitchen {
-    margin: 0 0 40px;
+    margin: 0 0 36px;
   }
 
   .slider-kitchen__item {
@@ -771,8 +902,7 @@ input[type="radio"].visually-hidden {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 30px 15px;
-    height: 111px;
+    padding: 30px 0;
   }
 
   .menu-header {
@@ -786,8 +916,8 @@ input[type="radio"].visually-hidden {
 
   .nav-header {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 927px;
-            flex: 0 1 927px;
+        -ms-flex: 0 1 945px;
+            flex: 0 1 945px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -829,7 +959,7 @@ input[type="radio"].visually-hidden {
     padding: 136px 0 0;
   }
 
-  .intro__wrapper {
+  .intro__container {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-pack: justify;
@@ -848,6 +978,15 @@ input[type="radio"].visually-hidden {
   .intro__creation {
     margin: 300px 0 0;
     margin-bottom: 50px;
+  }
+
+  .entertainment__container {
+    padding: 0 40px;
+  }
+
+  .entertainment__photo {
+    display: block;
+    border-radius: 5px;
   }
 }
 
@@ -873,15 +1012,27 @@ input[type="radio"].visually-hidden {
   }
 
   .kitchen {
-    margin-bottom: calc(50px + 100 * ((100vw - 320px) / 1006));
+    margin-bottom: calc(80px + 70 * ((100vw - 320px) / 1006));
   }
 
   .kitchen__subTitle {
-    margin-bottom: calc(20px + 20 * ((100vw - 320px) / 1006));
+    margin-bottom: calc(20px + 17 * ((100vw - 320px) / 1006));
   }
 
   .kitchen__title {
-    margin-bottom: calc(40px + 40 * ((100vw - 320px) / 1006));
+    margin-bottom: calc(40px + 43 * ((100vw - 320px) / 1006));
+  }
+
+  .entertainment {
+    margin-bottom: calc(50px + 100 * ((100vw - 320px) / 1006));
+  }
+
+  .entertainment__subTitle {
+    margin-bottom: calc(20px + 17 * ((100vw - 320px) / 1006));
+  }
+
+  .entertainment__title {
+    margin-bottom: calc(22px + 17 * ((100vw - 320px) / 1006));
   }
 }
 
@@ -892,7 +1043,29 @@ input[type="radio"].visually-hidden {
 }
 
 @media (any-hover: hover) {
+  .slider-kitchen .slick-arrow:hover {
+    background-color: transparent;
+  }
+
+  .slider-kitchen .slick-arrow:hover::before {
+    color: #D5621D;
+  }
+
   .nav-header__link:hover {
+    color: #D5621D;
+  }
+
+  .announcements__toogle:hover {
+    color: #D5621D;
+  }
+
+  .kitchen__menu-link:hover {
+    background-color: transparent;
+    color: #D5621D;
+  }
+
+  .entertainment__description:hover {
+    background-color: transparent;
     color: #D5621D;
   }
 }
