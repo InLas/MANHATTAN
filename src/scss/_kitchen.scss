@@ -1,0 +1,27 @@
+.kitchen {
+  @include adaptiv-value('margin-bottom', 150, 50, 1);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subTitle {
+    @include adaptiv-value('margin-bottom', 40, 20, 1);
+  }
+
+  &__title {
+    @include adaptiv-value('margin-bottom', 80, 40, 1);
+  }
+
+  &__menu-link {
+    font-family: 'Gothampro';
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background-color: $accentColor;
+    border-radius: 5px;
+  }
+}
