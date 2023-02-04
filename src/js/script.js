@@ -2,6 +2,7 @@
 
 @@include('plugins/slick.min.js');
 @@include('plugins/sliders.js');
+@@include('plugins/accordion.js');
 
 const headerToogle = document.querySelector('.menu-header__toogle');
 const navHeader = document.querySelector('.nav-header');
