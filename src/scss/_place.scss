@@ -1,0 +1,125 @@
+.place {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subTitle {
+    @include adaptiv-value('margin-bottom', 37, 20, 1);
+  }
+
+  &__title {
+    @include adaptiv-value('margin-bottom', 83, 40, 1);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: stretch;
+    margin: -12px;
+
+    @media (min-width: $tablet-width) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__contacts {
+    flex: 0 1 416px;
+    margin: 12px;
+  }
+
+  &__map {
+    flex: 0 1 856px;
+    max-height: 356px;
+    margin: 12px;
+    border: 2px solid $accentColor;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @media (min-width: $tablet-width) {
+      max-height: 656px;
+    }
+  }
+}
+
+.contacts {
+  color: $whiteColor;
+  background-color: rgba($color: $accentColor, $alpha: 0.1);
+  box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid $accentColor;
+  border-radius: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px;
+  }
+
+  &__info {
+    position: relative;
+    margin: 0 0 90px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -46px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba($color: $whiteColor, $alpha: 0.5);
+    }
+  }
+
+  &__title {
+    font-family: 'Gothampro';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    @include adaptiv-value('margin-bottom', 20, 10, 1);
+  }
+
+  &__text {
+    line-height: 21px;
+    transition: all 0.3s ease 0s;
+
+    &:not(:last-child) {
+      @include adaptiv-value('margin-bottom', 35, 15, 1);
+    }
+
+    &--tel {
+      @media (any-hover: hover) {
+        &:hover {
+          color: $accentColor;
+        }
+      }
+
+      &:focus {
+        color: $accentColor;
+      }
+    }
+  }
+
+  &__management {}
+
+  &__tel {
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+      }
+    }
+
+    &:focus {
+      color: $accentColor;
+    }
+  }
+}

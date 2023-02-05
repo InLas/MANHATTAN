@@ -1,0 +1,19 @@
+.page-footer {
+  width: 100%;
+  @include adaptiv-value('margin-top', 100, 50, 1);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 80px;
+    margin: -10px;
+  }
+
+  &__text {
+    line-height: 21px;
+    margin: 10px;
+    color: rgba($color: $whiteColor, $alpha: 0.5);
+  }
+}

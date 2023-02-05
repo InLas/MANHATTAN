@@ -84,3 +84,19 @@ window.onload = function () {
     }
   });
 }
+
+ymaps.ready(function () {
+  let myMap = new ymaps.Map('map', {
+    center: [59.925340, 30.329325],
+    zoom: 17
+  }, {
+    searchControlProvider: 'yandex#search'
+  })
+
+  myMap.geoObjects
+    .add(new ymaps.Placemark([59.925340, 30.329325], {
+      iconCaption: 'набережная реки Фонтанки 90к1'
+    }, {
+      preset: 'islands#redDotIconWithCaption'
+    }));
+});

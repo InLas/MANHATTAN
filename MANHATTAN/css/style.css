@@ -1104,6 +1104,147 @@ input[type="radio"].visually-hidden {
   transition: all 0.3s ease 0s;
 }
 
+.place__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.place__subTitle {
+  margin-bottom: 37px;
+}
+
+.place__title {
+  margin-bottom: 83px;
+}
+
+.place__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  margin: -12px;
+}
+
+.place__contacts {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 416px;
+          flex: 0 1 416px;
+  margin: 12px;
+}
+
+.place__map {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 856px;
+          flex: 0 1 856px;
+  max-height: 356px;
+  margin: 12px;
+  border: 2px solid #D5621D;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contacts {
+  color: #ffffff;
+  background-color: rgba(213, 98, 29, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid #D5621D;
+  border-radius: 5px;
+}
+
+.contacts__info {
+  position: relative;
+  margin: 0 0 90px;
+}
+
+.contacts__info::before {
+  content: '';
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.contacts__title {
+  font-family: 'Gothampro';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.contacts__text {
+  line-height: 21px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contacts__text:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.contacts__text--tel:focus {
+  color: #D5621D;
+}
+
+.contacts__tel {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contacts__tel:focus {
+  color: #D5621D;
+}
+
+.page-footer {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.page-footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 80px;
+  margin: -10px;
+}
+
+.page-footer__text {
+  line-height: 21px;
+  margin: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media (min-width: 768px) {
   .intro__info {
     min-height: 540px;
@@ -1140,6 +1281,19 @@ input[type="radio"].visually-hidden {
 
   .rider__button {
     padding: 20px 44px 20px 40px;
+  }
+
+  .place__wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+
+  .place__map {
+    max-height: 656px;
+  }
+
+  .contacts {
+    padding: 30px;
   }
 }
 
@@ -1246,6 +1400,10 @@ input[type="radio"].visually-hidden {
     display: block;
     border-radius: 5px;
   }
+
+  .contacts {
+    padding: 50px;
+  }
 }
 
 @media (max-width: 1326px) {
@@ -1308,6 +1466,26 @@ input[type="radio"].visually-hidden {
   .dj__title {
     font-size: calc(18px + 14 * ((100vw - 320px) / 1006));
   }
+
+  .place__subTitle {
+    margin-bottom: calc(20px + 17 * ((100vw - 320px) / 1006));
+  }
+
+  .place__title {
+    margin-bottom: calc(40px + 43 * ((100vw - 320px) / 1006));
+  }
+
+  .contacts__title {
+    margin-bottom: calc(10px + 10 * ((100vw - 320px) / 1006));
+  }
+
+  .contacts__text:not(:last-child) {
+    margin-bottom: calc(15px + 20 * ((100vw - 320px) / 1006));
+  }
+
+  .page-footer {
+    margin-top: calc(50px + 50 * ((100vw - 320px) / 1006));
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1326px) {
@@ -1344,6 +1522,14 @@ input[type="radio"].visually-hidden {
   }
 
   .dj__link:hover::before {
+    color: #D5621D;
+  }
+
+  .contacts__text--tel:hover {
+    color: #D5621D;
+  }
+
+  .contacts__tel:hover {
     color: #D5621D;
   }
 }
