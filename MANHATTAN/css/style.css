@@ -1157,6 +1157,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+  background: url(../img/Rectangle_44.png) no-repeat center;
 }
 
 .contacts {
@@ -1535,6 +1536,7 @@ input[type="radio"].visually-hidden {
 }
 @supports (-webkit-appearance:none){
 .intro__info{background:url(../img/Rectangle_30.webp) no-repeat top}
+.place__map{background:url(../img/Rectangle_44.webp) no-repeat center}
 }
 
  @media (min-width: 768px){
