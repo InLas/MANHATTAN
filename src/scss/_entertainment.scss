@@ -1,6 +1,5 @@
 .entertainment {
-  // @include adaptiv-value('margin-bottom', 150, 50, 1);
-  margin-bottom: 154px;
+  @include adaptiv-value('margin-bottom', 150, 50, 1);
 
   &__container {
     display: flex;

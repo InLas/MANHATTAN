@@ -2,7 +2,9 @@
   @include adaptiv-value('margin-bottom', 150, 80, 1);
 
   &__container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__subTitle {
@@ -15,13 +17,15 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-    // justify-content: space-evenly;
-    margin: 0 110px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-self: stretch;
+    margin: -15px;
   }
 
   &__list {
     flex: 0 1 526px;
+    margin: 15px;
   }
 
   &__item {
@@ -29,7 +33,6 @@
       margin: 0 0 20px;
     }
 
-    text-align: left;
     color: $whiteColor;
   }
 
@@ -46,7 +49,7 @@
     justify-content: space-between;
     width: 100%;
     min-height: 67px;
-    padding: 20px 44px 20px 40px;
+    padding: 20px;
     box-sizing: border-box;
     color: inherit;
     background-color: rgba($color: $accentColor, $alpha: 0.1);
@@ -72,6 +75,10 @@
         transform: rotate(90deg);
       }
     }
+
+    @media (min-width: $tablet-width) {
+      padding: 20px 44px 20px 40px;
+    }
   }
 
   &__sub-list {
@@ -92,13 +99,17 @@
 
   &__dj {
     flex: 0 1 416px;
+    margin: 15px;
   }
 }
 
 .dj {
   font-family: "Gothampro";
-
   color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   &__title {
     font-family: "Gothampro";
@@ -112,15 +123,16 @@
 
   &__list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 0 -12px;
+    margin: -12px;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 12px;
+    margin: 12px;
   }
 
   &__picture {
