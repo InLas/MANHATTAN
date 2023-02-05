@@ -7,8 +7,20 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
     min-height: 80px;
     margin: -10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: calc(100% - 20px);
+      height: 1px;
+      background-color: rgba($color: $whiteColor, $alpha: 0.5);
+    }
   }
 
   &__text {
